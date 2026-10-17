@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>VozBairro – Entrar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:#1B2B3A}a:hover{color:#0F1A24}
+:focus-visible{outline:2px solid #2F7BD8;outline-offset:2px}
+:root{color-scheme:light;--ease-out:cubic-bezier(.23,1,.32,1);--ease-in-out:cubic-bezier(.77,0,.175,1);--ease-drawer:cubic-bezier(.32,.72,0,1)}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-variant-numeric:tabular-nums}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.scroll{scrollbar-width:none;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scroll-padding-block:100px 110px}
+.scroll::-webkit-scrollbar{display:none}
+.press{transition:transform 160ms var(--ease-out)}
+.press:active{transform:scale(.97);transition-duration:100ms}
+.switch:active .knob{width:33px!important}
+.switch[aria-checked="true"]:active .knob{transform:translateX(14px)!important}
+input[type=range]{accent-color:#1B2B3A}
+@media (prefers-reduced-transparency: reduce){[style*="backdrop-filter"]{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@keyframes tabIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes enterFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tile{transition:transform 160ms var(--ease-out)}.tile:active{transform:scale(.96)}
+.field:focus-within{box-shadow:inset 0 0 0 1.5px #1B2B3A!important}
+input::placeholder{color:#8592A0}
+.col>*{flex-shrink:0}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #F7F9FB; font-family: 'Inter', system-ui, sans-serif; color: #1B2B3A; transition: background-color .3s">
+<div data-iphone="statusbar" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 0; height: 47px; z-index: 65; pointer-events: none; display: flex; align-items: center; justify-content: space-between; padding: 4px 26px 0 36px; color: #1B2B3A; background: transparent; transition: background-color .25s, color .25s">
+<span style="width: 54px; font-size: 16px; font-weight: 600; letter-spacing: -0.2px">9:41</span>
+<span style="position: absolute; left: 50%; top: 11px; width: 122px; height: 36px; margin-left: -61px; border-radius: 18px; background: #000000"></span>
+<span style="display: flex; align-items: center; gap: 6px"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"></rect><rect x="5" y="5.5" width="3" height="6.5" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="0" width="3" height="12" rx="1"></rect></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.4 0 4.6.9 6.2 2.5l1.3-1.3C13.5 1.5 10.9.4 8 .4S2.5 1.5.5 3.4l1.3 1.3C3.4 3.1 5.6 2.2 8 2.2z"></path><path d="M8 5.6c1.5 0 2.8.6 3.8 1.5l1.3-1.3C11.8 4.6 10 3.8 8 3.8s-3.8.8-5.1 2l1.3 1.3c1-.9 2.3-1.5 3.8-1.5z"></path><path d="M8 11.6 10.4 9.2C9.8 8.6 8.9 8.3 8 8.3s-1.8.3-2.4.9z"></path></svg><svg width="27" height="13" viewBox="0 0 27 13" fill="none"><rect x="0.5" y="0.5" width="23" height="12" rx="3.5" stroke="currentColor" opacity="0.4"></rect><rect x="2" y="2" width="20" height="9" rx="2" fill="currentColor"></rect><path d="M25 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" fill="currentColor" opacity="0.45"></path></svg></span>
+</div>
+<span data-iphone="home" aria-hidden="true" style="position: absolute; left: 50%; bottom: 8px; width: 134px; height: 5px; margin-left: -67px; border-radius: 3px; background: #1B2B3A; z-index: 65; pointer-events: none; transition: background-color .25s"></span>
+
+<main class="scroll col" style="position: absolute; inset: 0; overflow-y: auto; padding: 47px 20px 40px; display: flex; flex-direction: column">
+<div style="height: 54px; display: flex; align-items: center">
+<a href="Perfil.dc.html" class="press" aria-label="Voltar" style="width: 46px; height: 46px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 1px #E6EBF0; display: flex; align-items: center; justify-content: center; color: #1B2B3A"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+</div>
+
+<div style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px; animation: enterFade .45s var(--ease-out) both">
+<span style="width: 56px; height: 56px; border-radius: 16px; background: #1B2B3A; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(27, 43, 58, 0.22)">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>
+</span>
+<h1 style="margin: 8px 0 0; font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 30px; line-height: 1.12; font-weight: 800; letter-spacing: -0.8px">{{titulo}}</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.45; color: #5E6B78">{{subtitulo}}</p>
+</div>
+
+<div role="tablist" aria-label="Modo de acesso" style="position: relative; margin-top: 24px; height: 46px; border-radius: 14px; background: #E3E9EF; padding: 4px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))">
+<span aria-hidden="true" style="position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 10px; background: #FFFFFF; box-shadow: 0 2px 6px rgba(15, 26, 36, 0.1); transform: translateX({{pilulaX}}); transition: transform .35s var(--ease-drawer)"></span>
+<button type="button" role="tab" aria-selected="{{selEntrar}}" onClick="{{modoEntrar}}" style="position: relative; border: none; background: transparent; font-size: 15px; font-weight: 600; color: {{corEntrar}}; transition: color .2s">Entrar</button>
+<button type="button" role="tab" aria-selected="{{selCriar}}" onClick="{{modoCriar}}" style="position: relative; border: none; background: transparent; font-size: 15px; font-weight: 600; color: {{corCriar}}; transition: color .2s">Criar conta</button>
+</div>
+
+<form onSubmit="{{enviar}}" novalidate style="margin-top: 20px; display: flex; flex-direction: column; gap: 14px">
+<sc-if value="{{criar}}" hint-placeholder-val="{{ false }}">
+<label style="display: flex; flex-direction: column; gap: 8px; animation: enterFade .3s var(--ease-out) both">
+<span style="font-size: 15px; font-weight: 600">Nome completo</span>
+<span class="field" style="height: 54px; border-radius: 14px; background: #FFFFFF; box-shadow: inset 0 0 0 1px #DDE3E9; display: flex; align-items: center; padding: 0 16px; transition: box-shadow .2s">
+<input type="text" autocomplete="name" placeholder="Como devemos te chamar?" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-size: 17px; color: #1B2B3A">
+</span>
+</label>
+</sc-if>
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 15px; font-weight: 600">CPF ou e-mail</span>
+<span class="field" style="height: 54px; border-radius: 14px; background: #FFFFFF; box-shadow: inset 0 0 0 {{bordaEsp}} {{bordaCor}}; display: flex; align-items: center; gap: 10px; padding: 0 16px; transition: box-shadow .2s">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #8592A0; flex-shrink: 0"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+<input type="text" inputmode="email" autocomplete="username" value="{{usuario}}" onInput="{{digUsuario}}" placeholder="000.000.000-00" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-size: 17px; color: #1B2B3A">
+</span>
+<sc-if value="{{erro}}" hint-placeholder-val="{{ false }}">
+<span role="alert" style="font-size: 13px; font-weight: 500; color: #B3261E">Informe seu CPF ou e-mail para continuar.</span>
+</sc-if>
+</label>
+<label style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 15px; font-weight: 600">Senha</span>
+<span class="field" style="height: 54px; border-radius: 14px; background: #FFFFFF; box-shadow: inset 0 0 0 1px #DDE3E9; display: flex; align-items: center; gap: 10px; padding: 0 6px 0 16px; transition: box-shadow .2s">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #8592A0; flex-shrink: 0"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+<input type="{{tipoSenha}}" autocomplete="current-password" value="minhasenha" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; font-size: 17px; color: #1B2B3A">
+<button type="button" onClick="{{verSenha}}" aria-label="{{verLabel}}" style="width: 44px; height: 44px; border: none; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5E6B78; padding: 0">
+<sc-if value="{{senhaOculta}}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"></path><circle cx="12" cy="12" r="3"></circle></svg></sc-if>
+<sc-if value="{{senhaVisivel}}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><path d="m2 2 20 20"></path><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"></path></svg></sc-if>
+</button>
+</span>
+</label>
+<sc-if value="{{entrar}}" hint-placeholder-val="{{ true }}">
+<a href="#" style="align-self: flex-end; min-height: 32px; display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #1D5BB8; text-decoration: none">Esqueci minha senha</a>
+</sc-if>
+<sc-if value="{{criar}}" hint-placeholder-val="{{ false }}">
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.45; color: #3D4B58; animation: enterFade .3s var(--ease-out) both">
+<input type="checkbox" checked style="width: 20px; height: 20px; margin: 1px 0 0; accent-color: #147D41; flex-shrink: 0">
+Li e aceito os termos de uso e a política de privacidade (LGPD).
+</label>
+</sc-if>
+
+<a href="PerfilLogado.dc.html" data-auth="login" onClick="{{enviar}}" class="press" style="margin-top: 6px; height: 56px; border-radius: 14px; background: #1B2B3A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 17px; font-weight: 600; text-decoration: none">
+<sc-if value="{{carregando}}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 18px; height: 18px; border-radius: 50%; border: 2.5px solid rgba(255,255,255,.35); border-top-color: #FFFFFF; animation: spin .7s linear infinite"></span></sc-if>
+{{botao}}
+</a>
+</form>
+
+<div style="margin: 22px 0 16px; display: flex; align-items: center; gap: 12px; font-size: 13px; color: #8592A0"><span style="flex: 1; height: 1px; background: #DDE3E9"></span>ou<span style="flex: 1; height: 1px; background: #DDE3E9"></span></div>
+
+<a href="PerfilLogado.dc.html" data-auth="login" class="press" style="height: 54px; border-radius: 14px; background: #FFFFFF; box-shadow: inset 0 0 0 1px #D5DBE1; color: #1B2B3A; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; font-weight: 600; text-decoration: none">
+<span style="font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.3px"><span style="color: #1351B4">g</span><span style="color: #F2A600">o</span><span style="color: #168821">v</span><span style="color: #1351B4">.br</span></span>
+Entrar com gov.br
+</a>
+<a href="Main.dc.html" class="press" style="margin-top: 8px; height: 48px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: #5E6B78; text-decoration: none">Continuar como visitante</a>
+
+<p style="margin: auto 0 0; padding-top: 16px; display: flex; gap: 8px; align-items: flex-start; font-size: 12px; line-height: 1.45; color: #6B7785"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 1px"><path d="M12 3 5 5.8v5.7c0 4.6 3 8 7 9.5 4-1.5 7-4.9 7-9.5V5.8z"></path></svg>Seus dados são protegidos pela LGPD e só são compartilhados com o órgão responsável pela ocorrência.</p>
+</main>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { modo: 'entrar', usuario: '123.456.789-00', ver: false, erro: false, carregando: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const criar = s.modo === 'criar';
+    return {
+      criar, entrar: !criar,
+      titulo: criar ? 'Crie sua conta' : 'Bem-vindo de volta',
+      subtitulo: criar ? 'Em menos de um minuto você já pode relatar e apoiar ocorrências.' : 'Entre para relatar, apoiar e acompanhar as ocorrências do seu bairro.',
+      pilulaX: criar ? '100%' : '0%',
+      selEntrar: criar ? 'false' : 'true', selCriar: criar ? 'true' : 'false',
+      corEntrar: criar ? '#5E6B78' : '#1B2B3A', corCriar: criar ? '#1B2B3A' : '#5E6B78',
+      modoEntrar: () => this.setState({ modo: 'entrar', erro: false }),
+      modoCriar: () => this.setState({ modo: 'criar', erro: false }),
+      usuario: s.usuario,
+      digUsuario: (e) => this.setState({ usuario: e.currentTarget.value, erro: false }),
+      erro: s.erro,
+      bordaEsp: s.erro ? '1.5px' : '1px',
+      bordaCor: s.erro ? '#B3261E' : '#DDE3E9',
+      tipoSenha: s.ver ? 'text' : 'password',
+      senhaOculta: !s.ver, senhaVisivel: s.ver,
+      verLabel: s.ver ? 'Ocultar senha' : 'Mostrar senha',
+      verSenha: () => this.setState({ ver: !this.state.ver }),
+      carregando: s.carregando,
+      botao: s.carregando ? 'Entrando…' : (criar ? 'Criar conta' : 'Entrar'),
+      enviar: (e) => {
+        if (!this.state.usuario.trim()) { e.preventDefault(); this.setState({ erro: true }); return; }
+        if (window.VB_APP && !this.state.carregando) {
+          e.preventDefault();
+          const a = e.currentTarget;
+          this.setState({ carregando: true });
+          setTimeout(() => { try { localStorage.setItem('vb-logado', '1'); } catch (x) {} location.hash = '#/PerfilLogado'; }, 700);
+        }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
