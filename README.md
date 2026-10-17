@@ -1,6 +1,6 @@
-# VozBairro — protótipo
+# Conexidade — protótipo
 
-Protótipo interativo em HTML do VozBairro (ocorrências do bairro, mapa real de Aracaju, botão SOS).
+Protótipo interativo em HTML do Conexidade (ocorrências do bairro, mapa real de Aracaju, botão SOS).
 
 ## Abrir
 
