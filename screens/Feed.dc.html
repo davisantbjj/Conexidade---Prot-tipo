@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>VozBairro – Feed da comunidade</title>
+<title>Conexidade – Feed da comunidade</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -202,7 +202,7 @@ img{outline:1px solid rgba(15,26,36,.06);outline-offset:-1px}
 <img src="{{shareImg}}" alt="" style="width: 52px; height: 52px; border-radius: 12px; object-fit: cover; flex-shrink: 0">
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
 <span style="font-size: 16px; font-weight: 700">{{shareTitulo}}</span>
-<span style="font-size: 13px; color: #5E6B78">vozbairro.app/d/{{shareId}}</span>
+<span style="font-size: 13px; color: #5E6B78">conexidade.app/d/{{shareId}}</span>
 </span>
 </div>
 <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
@@ -424,7 +424,7 @@ class Component extends DCLogic {
     const abrirShare = (k) => () => {
       const p = POSTS[k];
       if (window.VB_APP && navigator.share && matchMedia('(pointer: coarse)').matches) {
-        navigator.share({ title: p.titulo, text: p.titulo + ' · VozBairro', url: 'https://vozbairro.app/d/' + p.id }).catch(() => {});
+        navigator.share({ title: p.titulo, text: p.titulo + ' · Conexidade', url: 'https://conexidade.app/d/' + p.id }).catch(() => {});
         return;
       }
       this.setState({ share: k });
@@ -461,7 +461,7 @@ class Component extends DCLogic {
       fecharShare: () => this.setState({ share: '' }),
       toast: s.toast,
       shWhats: () => avisar('Abrindo o WhatsApp…'),
-      shLink: () => { try { navigator.clipboard.writeText('https://vozbairro.app/d/' + sp.id); } catch (e) {} avisar('Link copiado'); },
+      shLink: () => { try { navigator.clipboard.writeText('https://conexidade.app/d/' + sp.id); } catch (e) {} avisar('Link copiado'); },
       shInsta: () => avisar('Abrindo o Instagram…'),
       shMais: () => avisar('Compartilhado'),
       chips, verLixo, verPoste, vazio: !verLixo && !verPoste,

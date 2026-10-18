@@ -1,4 +1,4 @@
-/* VozBairro — runtime leve que executa as telas .dc.html do canvas fora dele.
+/* Conexidade — runtime leve que executa as telas .dc.html do canvas fora dele.
    Converte o template de cada tela em elementos React a cada render e
    adiciona o componente <vb-map> (mapa real de Aracaju com Leaflet). */
 (function () {
@@ -40,7 +40,7 @@
       } catch (e) { /* sem props */ }
     }
     const titleEl = doc.querySelector('title');
-    cache[name] = { name, root, helmetHTML, Logic, defaults, title: titleEl ? titleEl.textContent : 'VozBairro' };
+    cache[name] = { name, root, helmetHTML, Logic, defaults, title: titleEl ? titleEl.textContent : 'Conexidade' };
     return cache[name];
   }
 

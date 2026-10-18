@@ -5,7 +5,7 @@ Protótipo interativo em HTML do Conexidade (ocorrências do bairro, mapa real d
 ## Abrir
 
 - **Online:** GitHub Pages deste repositório.
-- **Local:** dê dois cliques em `Abrir VozBairro.bat` (precisa de Python) ou abra `index.html` direto no navegador.
+- **Local:** dê dois cliques em `Abrir Conexidade.bat` (precisa de Python) ou abra `index.html` direto no navegador.
 
 ## Editar
 

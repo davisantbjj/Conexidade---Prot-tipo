@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>VozBairro – Início</title>
+<title>Conexidade – Início</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -68,7 +68,7 @@ img{outline:1px solid rgba(15,26,36,.06);outline-offset:-1px}
 <header style="position: sticky; top: 0; z-index: 10; padding: 47px 16px 10px; display: flex; align-items: flex-start; justify-content: space-between; background: rgba(242, 245, 248, 0.88); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); transform: translateY({{headerY}}); transition: transform .3s var(--ease-out)">
 <div style="display: flex; flex-direction: column; gap: 2px; padding-top: 6px">
 <div style="display: flex; align-items: center; gap: 6px">
-<h1 translate="no" style="margin: 0; font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 27px; font-weight: 800; letter-spacing: -0.6px">VozBairro</h1>
+<h1 translate="no" style="margin: 0; font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 27px; font-weight: 800; letter-spacing: -0.6px">Conexidade</h1>
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
 </div>
 <button type="button" style="align-self: flex-start; min-height: 28px; border: none; background: transparent; padding: 0; display: flex; align-items: center; gap: 4px; font-size: 15px; color: #5E6B78">Bairro Suíssa, Aracaju
@@ -247,7 +247,7 @@ img{outline:1px solid rgba(15,26,36,.06);outline-offset:-1px}
 <img src="{{shareImg}}" alt="" style="width: 52px; height: 52px; border-radius: 12px; object-fit: cover; flex-shrink: 0">
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
 <span style="font-size: 16px; font-weight: 700">{{shareTitulo}}</span>
-<span style="font-size: 13px; color: #5E6B78">vozbairro.app/d/{{shareId}}</span>
+<span style="font-size: 13px; color: #5E6B78">conexidade.app/d/{{shareId}}</span>
 </span>
 </div>
 <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
@@ -711,7 +711,7 @@ class Component extends DCLogic {
     const abrirShare = (k) => () => {
       const p = POSTS[k];
       if (window.VB_APP && navigator.share && matchMedia('(pointer: coarse)').matches) {
-        navigator.share({ title: p.titulo, text: p.titulo + ' · VozBairro', url: 'https://vozbairro.app/d/' + p.id }).catch(() => {});
+        navigator.share({ title: p.titulo, text: p.titulo + ' · Conexidade', url: 'https://conexidade.app/d/' + p.id }).catch(() => {});
         return;
       }
       this.setState({ share: k });
@@ -726,7 +726,7 @@ class Component extends DCLogic {
       shareAberto: !!s.share, shareTitulo: sp.titulo, shareImg: sp.img, shareId: sp.id, toast: s.toast,
       fecharShare: () => this.setState({ share: '' }),
       shWhats: () => avisar('Abrindo o WhatsApp…'),
-      shLink: () => { try { navigator.clipboard.writeText('https://vozbairro.app/d/' + sp.id); } catch (e) {} avisar('Link copiado'); },
+      shLink: () => { try { navigator.clipboard.writeText('https://conexidade.app/d/' + sp.id); } catch (e) {} avisar('Link copiado'); },
       shInsta: () => avisar('Abrindo o Instagram…'),
       shMais: () => avisar('Compartilhado')
     };

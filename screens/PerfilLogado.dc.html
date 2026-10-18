@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>VozBairro – Meu perfil</title>
+<title>Conexidade – Meu perfil</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -377,7 +377,7 @@ class Component extends DCLogic {
       ],
       compTexto: s.comp ? 'Link copiado' : 'Compartilhar perfil',
       compartilharPerfil: () => {
-        try { navigator.clipboard.writeText('https://vozbairro.app/@davi.suissa'); } catch (e) {}
+        try { navigator.clipboard.writeText('https://conexidade.app/@davi.suissa'); } catch (e) {}
         this.setState({ comp: true });
         clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ comp: false }), 1800);
       },
