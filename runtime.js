@@ -447,7 +447,7 @@
   const sosRoot = ReactDOM.createRoot(document.getElementById('sos'));
   function nameFromHash() {
     const n = decodeURIComponent((location.hash || '').replace(/^#\/?/, ''));
-    return n ? (n.endsWith('.dc.html') ? n : n + '.dc.html') : 'Main.dc.html';
+    return n ? (n.endsWith('.dc.html') ? n : n + '.dc.html') : 'Abertura.dc.html'; // ao abrir o app: tela de carregamento
   }
   function logado() { try { return localStorage.getItem('vb-logado') === '1'; } catch (e) { return false; } }
   function render() {
